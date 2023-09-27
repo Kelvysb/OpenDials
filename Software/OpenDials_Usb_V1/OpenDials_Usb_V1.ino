@@ -48,6 +48,11 @@ bool button_r = false;
 bool button_x = false;
 bool button_y = false;
 
+bool button_l_state = false;
+bool button_r_state = false;
+bool button_x_state = false;
+bool button_y_state = false;
+
 int mode = 0;
 int mode_address = 0;
 
@@ -83,7 +88,7 @@ void loop()
     firstEncoder.Update();
     secondEncoder.Update();
     
-    if (millis() - delayTime < 300)
+    if (millis() - delayTime < 100)
         return;
 
     delayTime = millis();      
@@ -190,40 +195,48 @@ void JoypadMode()
     Gamepad.release(2);
   }
 
-  if(button_x)
+  if(button_x && !button_x_state)
   {
     Gamepad.press(3);    
+    button_x_state = true;
   }
   else
   {
     Gamepad.release(3);
+    button_x_state = false;
   }
 
-  if(button_y)
+  if(button_y && !button_y_state)
   {
     Gamepad.press(4);    
+    button_y_state = true;
   }
   else
   {
     Gamepad.release(4);
+    button_y_state = false;
   }
 
-  if(button_l)
+  if(button_l && !button_l_state)
   {
     Gamepad.press(10);
+    button_l_state = true;
   }
   else
   {
     Gamepad.release(10);
+    button_l_state = false;
   }
 
-  if(button_r)
+  if(button_r && !button_r_state)
   {
     Gamepad.press(11);
+    button_r_state = true;
   }
   else
   {
     Gamepad.release(11);
+    button_r_state = false;
   }
 
   Gamepad.write();
@@ -314,40 +327,48 @@ void KeyboardMode()
     Keyboard.release(KEY_RIGHT_SHIFT);
   }
 
-  if(button_x)
+  if(button_x && !button_x_state)
   {
-    Keyboard.press(KEY_DOWN);    
+    Keyboard.press(KEY_DOWN); 
+    button_x_state = true;
   }
   else
   {
     Keyboard.release(KEY_DOWN);
+    button_x_state = false;
   }
 
-  if(button_y)
+  if(button_y && !button_y_state)
   {
     Keyboard.press(KEY_UP);    
+    button_y_state = true;
   }
   else
   {
     Keyboard.release(KEY_UP);
+    button_y_state = false;
   }
 
-  if(button_l)
+  if(button_l && !button_l_state)
   {
     Keyboard.press(KEY_LEFT);
+    button_l_state = true;
   }
   else
   {
     Keyboard.release(KEY_LEFT);
+    button_l_state = false;
   }
 
-  if(button_r)
+  if(button_r && !button_r_state)
   {
     Keyboard.press(KEY_RIGHT);
+    button_r_state = true;
   }
   else
   {
     Keyboard.release(KEY_RIGHT);
+    button_r_state = false;
   }
 
   Keyboard.send();
