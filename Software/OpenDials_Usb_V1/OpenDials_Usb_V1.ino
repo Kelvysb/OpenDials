@@ -19,13 +19,14 @@ const int button_right_pin = 15;
 const int button_a_pin = 2;
 const int button_b_pin = 3;
 
-const int button_start_pin = 4;
-const int button_select_pin = 5;
 
-const int encoder1_a_pin = 9;
-const int encoder1_b_pin = 8;
-const int encoder2_a_pin = 6;
-const int encoder2_b_pin = 7;
+const int encoder1_a_pin = 6;
+const int encoder1_b_pin = 5;
+const int button_start_pin = 4;
+
+const int encoder2_a_pin = 8;
+const int encoder2_b_pin = 9;
+const int button_select_pin = 7;
 
 const int led_mode_joypad_pin = A0;
 const int led_mode_keyboard_pin = A1;
