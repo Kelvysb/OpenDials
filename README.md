@@ -4,10 +4,13 @@ Open Dials - Open Source Gamepad
 [Color Roll Test Game](https://github.com/Kelvysb/ColorRoll)
 
 Version video:
+
 https://www.youtube.com/watch?v=tNQyPmjfuhA&t=68s&ab_channel=CiaNCIStudio
 
 V1 3d: models (printables)
+
 https://www.thingiverse.com/thing:6273114
+
 https://skfb.ly/oMzWV
 
 Ingredients:
@@ -20,4 +23,5 @@ A lot - Wires
 4 - M3 - bolts and nuts
 
 Circuit:
+
 ![circuit](./docs/Circuit%20Schema.png)
